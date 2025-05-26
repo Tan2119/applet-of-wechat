@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="setting-item">
+    <text>清除聊天记录</text>
+    <button class="cu-btn bg-red shadow" bindtap="clearHistory">清除</button>
+  </view>
+</view>

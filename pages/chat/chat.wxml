@@ -1,0 +1,22 @@
+<view class="chat-page">
+  <cu-custom bgColor="white" isBack="{{false}}">
+    <view slot="content" bindtap="toggleSidebar">
+      <text class="cuIcon-menu text-xl padding-left-sm"></text>
+      <text class="text-bold padding-left-xs">客服聊天</text>
+    </view>
+  </cu-custom>
+
+  <scroll-view scroll-y class="chat-scroll" id="chat-scroll">
+    <view wx:for="{{messages}}" wx:key="index">
+      <message-bubble data="{{item}}" />
+    </view>
+  </scroll-view>
+
+  <view class="chat-input-area">
+    <button class="add-btn cu-btn" bindtap="chooseFile">+</button>
+    <textarea auto-height maxlength="500" placeholder="请输入内容" bindinput="onInput" value="{{inputText}}" />
+    <button class="send-btn cu-btn bg-blue shadow" bindtap="handleSend">发送</button>
+  </view>
+
+  <sidebar visible="{{showSidebar}}" bind:close="toggleSidebar" />
+</view>

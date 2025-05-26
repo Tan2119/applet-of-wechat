@@ -1,15 +1,28 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/chat/chat"
+  ],
+  "subpackages": [
+    {
+      "root": "pages/history",
+      "pages": ["history"]
+    },
+    {
+      "root": "pages/files",
+      "pages": ["files"]
+    },
+    {
+      "root": "pages/settings",
+      "pages": ["settings"]
+    }
   ],
   "window": {
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTextStyle": "black",
-    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "智能客服",
     "navigationStyle": "custom",
-    "backgroundColor": "#f5f5f5",
-    "enablePullDownRefresh": false
+    "backgroundColor": "#ffffff"
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {
+    "message-bubble": "/components/messageBubble/messageBubble",
+    "sidebar": "/components/sidebar/sidebar"
+  }
 }

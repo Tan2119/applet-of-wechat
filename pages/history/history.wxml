@@ -1,0 +1,6 @@
+<view class="container">
+  <view wx:for="{{history}}" wx:key="index" class="item">
+    <text class="time">{{item.timestamp}}</text>
+    <text class="text">{{item.text}}</text>
+  </view>
+</view>

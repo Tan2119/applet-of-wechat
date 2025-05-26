@@ -1,0 +1,6 @@
+<view class="message-wrapper {{data.isUser ? 'right' : 'left'}}">
+  <view class="message-bubble">
+    <text>{{data.text}}</text>
+  </view>
+  <text class="timestamp">{{data.timestamp}}</text>
+</view>

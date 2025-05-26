@@ -1,0 +1,12 @@
+<view class="container">
+  <block wx:for="{{files}}" wx:key="index">
+    <view class="file-item">
+      <text class="file-icon">📄</text>
+      <view class="file-info">
+        <text>{{item.name}}</text>
+        <text class="time">{{item.uploadTime}}</text>
+      </view>
+      <button class="cu-btn bg-red" data-index="{{index}}" bindtap="deleteFile">删除</button>
+    </view>
+  </block>
+</view>

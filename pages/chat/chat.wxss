@@ -1,0 +1,29 @@
+.chat-scroll {
+  height: calc(100vh - 100px);
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.chat-input-area {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20rpx;
+}
+
+.add-btn, .send-btn {
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 36rpx;
+}
+
+textarea {
+  flex: 1;
+  margin: 0 20rpx;
+  max-height: 240rpx;
+}
