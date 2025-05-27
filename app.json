@@ -17,9 +17,9 @@
     }
   ],
   "window": {
-    "navigationBarTitleText": "智能客服",
-    "navigationStyle": "custom",
-    "backgroundColor": "#ffffff"
+    "navigationBarTitleText": "思控助手",
+    "navigationStyle": "default",
+    "backgroundColor": "#FFFFFF"
   },
   "usingComponents": {
     "message-bubble": "/components/messageBubble/messageBubble",

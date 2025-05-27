@@ -1,7 +1,26 @@
+.custom-nav {
+  height: 88rpx;
+  padding-top: 40rpx; /* 状态栏高度 */
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+.menu-icon {
+  font-size: 36rpx;
+  margin-right: 20rpx;
+}
+.title {
+  font-weight: bold;
+  font-size: 32rpx;
+}
+
 .chat-scroll {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 120rpx);
   padding: 20rpx;
   box-sizing: border-box;
+  overflow-y: scroll;
 }
 
 .chat-input-area {
@@ -10,20 +29,46 @@
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background: #fff;
   padding: 20rpx;
+  padding-bottom: calc(20rpx + env(safe-area-inset-bottom, 0));
+  box-sizing: border-box;
+  border-top: 1px solid #e5e5e5;
+  overflow-x: hidden;
 }
 
-.add-btn, .send-btn {
+
+.add-btn {
   width: 80rpx;
   height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50rpx;
+  border-radius: 50%;
+  background-color: #F2F3F5;
+}
+
+
+.send-btn {
+  width: 140rpx;
+  height: 80rpx;
+  flex-shrink: 0;
   text-align: center;
   line-height: 80rpx;
   font-size: 36rpx;
+  color:#ffffff;
+  background-color: #07C160;
 }
 
 textarea {
   flex: 1;
   margin: 0 20rpx;
   max-height: 240rpx;
+  min-height: 80rpx;
+  padding: 10rpx;
+  border: 1px solid #e5e5e5;
+  border-radius: 8rpx;
+  background-color: #fff;
 }
