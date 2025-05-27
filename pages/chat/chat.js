@@ -1,5 +1,6 @@
-const { saveMessage, getMessages } = require('../../utils/storage.js');
+const { saveMessage, getMessages,clearMessages } = require('../../utils/storage.js');
 const { uploadFileToServer } = require('../../utils/api.js');
+
 
 Page({
   data: {
@@ -61,6 +62,38 @@ Page({
   },
 
   toggleSidebar() {
+    console.log("菜单点击了"); 
     this.setData({ showSidebar: !this.data.showSidebar });
+  },
+
+  closeSidebar() {
+    this.setData({ showSidebar: false });
+  },
+
+  goToHistory() {
+    wx.navigateTo({
+      url: '/pages/history/history'
+    });
+  },
+
+  goToFileManager() {
+    wx.navigateTo({
+      url: '/pages/files/files'
+    });
+  },
+
+  clearHistory() {
+    wx.showModal({
+      title: '清空历史记录',
+      content: '确定要清空所有聊天记录吗？',
+      success: (res) => {
+        if (res.confirm) {
+          clearMessages();
+          this.setData({ messages: [] });
+          wx.showToast({ title: '已清空', icon: 'success' });
+        }
+      }
+    });
   }
+  
 });

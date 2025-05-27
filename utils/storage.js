@@ -11,7 +11,12 @@ function getMessages() {
   return wx.getStorageSync('chatHistory') || [];
 }
 
+function clearMessages() {
+  wx.removeStorageSync('chatHistory');
+}
+
 module.exports = {
   saveMessage,
-  getMessages
+  getMessages,
+  clearMessages
 };

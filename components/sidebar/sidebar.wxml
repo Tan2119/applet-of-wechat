@@ -1,8 +1,0 @@
-<view wx:if="{{visible}}">
-  <view class="mask" bindtap="closeSidebar" />
-  <view class="sidebar">
-    <navigator url="/pages/history/index">🕒 历史记录</navigator>
-    <navigator url="/pages/files/index">📂 文件管理</navigator>
-    <navigator url="/pages/settings/index">⚙️ 设置</navigator>
-  </view>
-</view>

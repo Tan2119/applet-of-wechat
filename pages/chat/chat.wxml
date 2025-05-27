@@ -1,7 +1,18 @@
 <view class="chat-page">
+  <!-- 顶部导航栏 -->
   <view class="custom-nav">
-  <view class="menu-icon" bindtap="toggleSidebar">☰</view>
-  <view class="title">客服聊天</view>
+    <view class="menu-icon" bindtap="toggleSidebar">☰</view>
+    <view class="title">客服聊天</view>
+  </view>
+
+  <!-- 侧边栏 -->
+  <view class="sidebar {{showSidebar ? 'sidebar-show' : ''}}" wx:if="{{showSidebar}}">
+  <view class="sidebar-mask" bindtap="closeSidebar"></view>
+  <view class="sidebar-content">
+    <view class="sidebar-item" bindtap="goToHistory">📜 历史记录</view>
+    <view class="sidebar-item" bindtap="goToFileManager">📁 文件管理</view>
+    <view class="sidebar-item" bindtap="clearHistory">🗑️ 清空历史记录</view>
+  </view>
 </view>
 
 
@@ -17,5 +28,4 @@
     <button class="send-btn" bindtap="handleSend">发送</button>
   </view>
 
-  <sidebar visible="{{showSidebar}}" bind:close="toggleSidebar" />
 </view>

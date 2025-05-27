@@ -22,7 +22,6 @@
     "backgroundColor": "#FFFFFF"
   },
   "usingComponents": {
-    "message-bubble": "/components/messageBubble/messageBubble",
-    "sidebar": "/components/sidebar/sidebar"
+    "message-bubble": "/components/messageBubble/messageBubble"
   }
 }
